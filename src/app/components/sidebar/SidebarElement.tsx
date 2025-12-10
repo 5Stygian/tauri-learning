@@ -1,6 +1,4 @@
-import { React } from 'react';
-
-export default function SidebarElement({ content: string }): React.ReactElement<div> {
+export default function SidebarElement({ content: string }): React.ReactElement {
   return (
     <div
       className="display-inline mx-auto my-12 text-cyan-50 
