@@ -1,9 +1,7 @@
-export default function Sidebar(): React.ReactElement {
+export default function Sidebar() {
   return (
     <nav 
-      className="float-left w-1/5 mr-20 
-                 bg-sky-800 
-                 border-solid border-r-4 border-cyan-400"
+      className="float-left w-1/5 mr-20 bg-sky-800 border-solid border-r-4 border-cyan-400"
     />
   );
 }
