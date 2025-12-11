@@ -26,5 +26,5 @@ export default function Element({
 }
 
 export function EmptyCell() {
-  return ( <div className="w-25 h-25"></div> );
+  return ( <div className="min-w-25 min-h-25"></div> );
 }
