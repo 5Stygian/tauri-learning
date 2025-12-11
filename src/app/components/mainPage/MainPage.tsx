@@ -1,3 +1,5 @@
+/** page content that is not in the sidebar */
+
 import { JSX } from 'react';
 import { HasChildren } from '../../util/types';
 

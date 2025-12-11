@@ -1,5 +1,5 @@
-import Greet from "./misc/greet";
 import MainPage from "./mainPage/MainPage";
 import Sidebar, { SidebarElement } from "./sidebar/Sidebar";
+import PeriodicTable from "./periodicTable/periodicTable";
 
-export { Greet, MainPage, Sidebar, SidebarElement };
+export { MainPage, Sidebar, SidebarElement, PeriodicTable };
