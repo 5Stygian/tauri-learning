@@ -1,7 +1,7 @@
 import EmptyCell from './emptyCell';
 
 export default function HydrogenHeliumDist() {
-  retrun (
+  return (
     <>      
       <EmptyCell />
       <EmptyCell />
