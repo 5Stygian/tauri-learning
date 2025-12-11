@@ -14,7 +14,7 @@ export default function Element({
   atomicNumber,
   color,
 }: ElementProps) {
-  const blockStyle = `w-25 h-25 border-2 shadow-2x1 shadow-${color} text-${color}`;
+  const blockStyle = `min-w-25 min-h-25 border-2 shadow-2x1 shadow-${color} text-${color}`;
 
   return (
     <div className={blockStyle}>
