@@ -1,1 +1,9 @@
-export default function PeriodicTable() {}
+import { HasChildren } from '../../utils/types';
+
+export default function PeriodicTable({ children }: HasChildren) {
+  return (
+    <div>
+      {children}
+    </div>
+  );
+}
