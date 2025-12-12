@@ -72,7 +72,7 @@ export default function Cell({
         default:
           family = "Unknown";
           break;
-      }
+      } // switch
 
       blockStyle = `${blockStyle} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
 
@@ -83,7 +83,7 @@ export default function Cell({
           <div className="text-center">{name}</div>
           <div className="text-center text-sm mt-1">{family}</div>
         </div>
-      );
+      ); // return
     } else {
       blockStyle = `${blockStyle} place-content-center`;
 
@@ -91,17 +91,21 @@ export default function Cell({
         <div className={blockStyle}>
           <div className="text-center">{name}</div>
         </div>
-      );
-    }
+      ); // return
+    } // if
   } else {
     const elementArray: React.ReactNode[] = [];
     
     for (let i = 0; i < amount; i++) {
       elementArray.push(
         <div key={i} className={blockSizing} />
-      );
-    }
+      ); // push
+    } // for
 
-    return (<>{elementArray}</>);
-  }
-}
+    return (
+      <>
+        {elementArray}
+      </>
+    ); // return
+  } // else
+} // Cell
