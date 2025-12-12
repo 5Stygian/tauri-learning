@@ -14,6 +14,7 @@ interface ElementProps {
   color?: string;
   empty?: boolean;
   amount?: number;
+  compressedFBlock?: boolean;
 }
 
 export default function Cell({
@@ -22,18 +23,29 @@ export default function Cell({
   atomicNumber,
   color,
   empty = false,
-  amount = 0
+  amount = 0,
+  compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    const blockStyle = `${blockSizing} border-2 shadow-2x1 ${color}`;
+    let blockStyle = `${blockSizing} border-2 shadow-2x1 ${color} select-none`;
 
-    return (
-      <div className={blockStyle}>
-        <span className="text-lg pl-1.5">{atomicNumber}</span>
-        <div className="text-center text-5xl -mt-2">{symbol}</div>
-        <div className="text-center">{name}</div>
-      </div>
-    );
+    if (!compressedFBlock) {
+      return (
+        <div className={blockStyle}>
+          <span className="text-lg pl-1.5">{atomicNumber}</span>
+          <div className="text-center text-5xl -mt-2">{symbol}</div>
+          <div className="text-center">{name}</div>
+        </div>
+      );
+    } else {
+      blockStyle = `${blockStyle} place-content-center`;
+
+      return (
+        <div className={blockStyle}>
+          <div className="text-center">{name}</div>
+        </div>
+      );
+    }
   } else {
     const elementArray: React.ReactNode[] = [];
     
