@@ -33,8 +33,7 @@ export default function Cell({
   compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    let blockStyle = `${blockSizing} bg-black border-2 shadow-2x1 ${color} select-none
-                       duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
+    let blockStyle = `${blockSizing} bg-black border-2 shadow-2x1 ${color} font-bold select-none`;
 
     if (!compressedFBlock) {
       let family;
@@ -74,6 +73,8 @@ export default function Cell({
           family = "Unknown";
           break;
       }
+
+      blockStyle = `${blockStyle} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
 
       return (
         <div className={blockStyle}>
