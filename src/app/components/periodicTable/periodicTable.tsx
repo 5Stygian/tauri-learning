@@ -1,14 +1,16 @@
-import Period1 from "./periods/period1";
-import Period2 from "./periods/period2";
-import Period3 from "./periods/period3";
-import Period4 from "./periods/period4";
-import Period5 from "./periods/period5";
-import Period6 from "./periods/period6";
-import Period7 from "./periods/period7";
+import Period1 from "./periods/period1.tsx";
+import Period2 from "./periods/period2.tsx";
+import Period3 from "./periods/period3.tsx";
+import Period4 from "./periods/period4.tsx";
+import Period5 from "./periods/period5.tsx";
+import Period6 from "./periods/period6.tsx";
+import Period7 from "./periods/period7.tsx";
+import Lanthanides from "./periods/lanthanides.tsx";
+import Actinides from "./periods/actinides.tsx";
 
 export default function PeriodicTable() {
   return (
-    <div className="grid gap-x-4 grid-cols-18 grid-rows-7 scale-90 -ml-12 -mt-4">
+    <div className="grid gap-x-16 grid-cols-18 grid-rows-9 scale-87 -ml-22 -mt-4">
       <Period1 />
       <Period2 />
       <Period3 />
@@ -16,6 +18,8 @@ export default function PeriodicTable() {
       <Period5 />
       <Period6 />
       <Period7 />
+      <Lanthanides />
+      <Actinides />
     </div>
   );
 }

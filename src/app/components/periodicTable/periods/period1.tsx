@@ -1,4 +1,4 @@
-import Cell from "../cell/cell";
+import Cell from "../cell/cell.tsx";
 
 import config from "@/app/data/config.ts";
 

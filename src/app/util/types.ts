@@ -6,8 +6,3 @@ export interface Config {
     nobleGasses: string;
   };
 }
-
-export interface PeriodProps {
-  className?: string;
-  style?: React.CSSProperties;
-}

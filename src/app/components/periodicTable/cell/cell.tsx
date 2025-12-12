@@ -4,7 +4,7 @@ import React from "react";
 
 import config from "@/app/data/config";
 
-const blockSizing = "min-w-25 min-h-25 scale-67";
+const blockSizing = "min-w-27 w-min min-h-25 -my-4 scale-67";
 
 interface ElementProps {
   // element data
@@ -33,7 +33,8 @@ export default function Cell({
   compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    let blockStyle = `${blockSizing} -my-4 border-2 shadow-2x1 ${color} select-none`;
+    let blockStyle = `${blockSizing} bg-black border-2 shadow-2x1 ${color} select-none
+                       duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
 
     if (!compressedFBlock) {
       let family;
@@ -46,7 +47,7 @@ export default function Cell({
           family = "Alkaline Earth Metal";
           break;
         case config.colors.transitionMetal:
-          family = "Transition Metal";
+          family = <span>Transition<br />Metal</span>;
           break;
         case config.colors.postTransitionMetal:
           family = "Post-Transition Metal";
