@@ -3,8 +3,8 @@ import Period2 from "./periods/period2";
 import Period3 from "./periods/period3";
 import Period4 from "./periods/period4";
 import Period5 from "./periods/period5";
-//import Period6 from "./periods/period6";
-//import Period7 from "./periods/period7";
+import Period6 from "./periods/period6";
+import Period7 from "./periods/period7";
 
 export default function PeriodicTable() {
   return (
@@ -14,6 +14,8 @@ export default function PeriodicTable() {
       <Period3 />
       <Period4 />
       <Period5 />
+      <Period6 />
+      <Period7 />
     </div>
   );
 }
