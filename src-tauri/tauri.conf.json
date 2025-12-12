@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri-learning",
+  "productName": "stygian-periodic-table",
   "version": "0.1.0",
   "identifier": "com.tauri.dev",
   "build": {
@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "tauri-learning",
+        "title": "Stygian Periodic Table",
         "width": 800,
         "height": 600,
         "resizable": true,

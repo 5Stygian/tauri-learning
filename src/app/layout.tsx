@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "tauri-learning",
-  description: "a repository for learning tauri",
+  title: "Stygian Periodic Table",
+  description: "A periodic table",
 };
 
 export default function RootLayout({
