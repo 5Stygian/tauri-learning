@@ -5,6 +5,7 @@ export default function Index() {
     <main className="min-h-screen w-full">
       <c.MainPage>
         <c.PeriodicTable />
+        <c.ElementCard />
       </c.MainPage>
     </main>
   );
