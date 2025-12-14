@@ -4,7 +4,7 @@ import React from "react";
 
 import config from "@/app/data/config";
 
-const defaultBlockStyles = "min-w-27 w-min min-h-25 -my-4 scale-67 transform-gpu";
+const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67 transform-gpu";
 
 interface ElementProps {
   // element data
@@ -33,7 +33,7 @@ export default function Cell({
   compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    let blockStyle = `${defaultBlockStyles} bg-black border-2 shadow-2x1 ${color} font-bold select-none`;
+    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${color} font-bold select-none`;
 
     if (!compressedFBlock) {
       let family;
@@ -78,7 +78,7 @@ export default function Cell({
 
       return (
         <div className={blockStyle}>
-          <span className="text-lg pl-1.5">{atomicNumber}</span>
+          <span className="text-lg pl-1.5 mb-1">{atomicNumber}</span>
           <div className="text-center text-5xl -mt-2">{symbol}</div>
           <div className="text-center">{name}</div>
           <div className="text-center text-sm mt-1">{family}</div>
@@ -99,7 +99,7 @@ export default function Cell({
     
     for (let i = 0; i < amount; i++) {
       elementArray.push(
-        <div key={i} className={defaultBlockStyles} />
+        <div key={i} className={defaultCellStyles} />
       ); // push empty cell
     } // for amount of empty cells
 
