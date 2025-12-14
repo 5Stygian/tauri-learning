@@ -1,4 +1,4 @@
-const ELEMENTS: Element[] = [];
+"use client";
 
 export class Element {
     [x: string|number]: string|number;
@@ -17,11 +17,10 @@ export class Element {
         this.atomicNumber = atomicNumber;
         this.group = group;
         this.period = period;
-
-        ELEMENTS.push(this);
     }
 }
 
+// !! ELEMENTS no longer exists !!
 // This exists so that you can access the ELEMENTS array by
 // referring to the element's atomic number instead of an array index.
 // Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
@@ -166,5 +165,3 @@ export const Moscovium: Element     = new Element({name: "Moscovium", symbol: "M
 export const Livermorium: Element   = new Element({name: "Livermorium", symbol: "Lv", family: "postTransitionMetal", atomicNumber: 116, group: 16, period: 7});
 export const Tenessine: Element     = new Element({name: "Tenessine", symbol: "Ts", family: "halogen", atomicNumber: 117, group: 17, period: 7});
 export const Oganesson: Element     = new Element({name: "Oganesson", symbol: "O6", family: "nobleGas", atomicNumber: 118, group: 18, period: 7});
-
-export default ELEMENTS;

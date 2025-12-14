@@ -1,28 +1,28 @@
 import Cell from "../cell/cell.tsx"
 
-import config from "../../../data/config.ts";
+import { Astatine, Barium, Bismuth, Cesium, Gold, Hafnium, Iridium, Lead, Mercury, NaE, Osmium, Platinum, Polonium, Radon, Rhenium, Tantalum, Thallium, Tungsten } from "@/app/data/elements.ts";
 
 export default function Period6() {
   return (
     <>
-      <Cell symbol="Cs" name="Cesium" atomicNumber={55} family={config.family.alkaliMetal} />
-      <Cell symbol="Ba" name="Barium" atomicNumber={56} family={config.family.alkalineEarthMetal} />
-      <Cell compressedFBlock={true} name="Lanthanide Series" symbol="57 - 71" family={config.family.lanthanide} />
-      <Cell symbol="Hf" name="Hafnium" atomicNumber={72} family={config.family.transitionMetal} />
-      <Cell symbol="Ta" name="Tantalum" atomicNumber={73} family={config.family.transitionMetal} />
-      <Cell symbol="W" name="Tungsten" atomicNumber={74} family={config.family.transitionMetal} />
-      <Cell symbol="Re" name="Rhenium" atomicNumber={75} family={config.family.transitionMetal} />
-      <Cell symbol="Os" name="Osmium" atomicNumber={76} family={config.family.transitionMetal} />
-      <Cell symbol="Ir" name="Iridium" atomicNumber={77} family={config.family.transitionMetal} />
-      <Cell symbol="Pt" name="Platinum" atomicNumber={78} family={config.family.transitionMetal} />
-      <Cell symbol="Au" name="Gold" atomicNumber={79} family={config.family.transitionMetal} />
-      <Cell symbol="Hg" name="Mercury" atomicNumber={80} family={config.family.transitionMetal} />
-      <Cell symbol="Tl" name="Thallium" atomicNumber={81} family={config.family.postTransitionMetal} />
-      <Cell symbol="Pb" name="Lead" atomicNumber={82} family={config.family.postTransitionMetal} />
-      <Cell symbol="Bi" name="Bismuth" atomicNumber={83} family={config.family.postTransitionMetal} />
-      <Cell symbol="Po" name="Polonium" atomicNumber={84} family={config.family.metalloid} />
-      <Cell symbol="At" name="Astatine" atomicNumber={85} family={config.family.halogen} />
-      <Cell symbol="Rn" name="Radon" atomicNumber={86} family={config.family.nobleGas} />
+      <Cell element={Cesium} />
+      <Cell element={Barium} />
+      <Cell compressedFBlock={true} text="Lanthanide Series" range="57 - 71" />
+      <Cell element={Hafnium} />
+      <Cell element={Tantalum} />
+      <Cell element={Tungsten} />
+      <Cell element={Rhenium} />
+      <Cell element={Osmium} />
+      <Cell element={Iridium} />
+      <Cell element={Platinum} />
+      <Cell element={Gold} />
+      <Cell element={Mercury} />
+      <Cell element={Thallium} />
+      <Cell element={Lead} />
+      <Cell element={Bismuth} />
+      <Cell element={Polonium} />
+      <Cell element={Astatine} />
+      <Cell element={Radon} />
     </>
   );
 }

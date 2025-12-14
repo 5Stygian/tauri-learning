@@ -3,17 +3,17 @@
 import React from "react";
 
 import config from "@/app/data/config";
+import { Element } from "@/app/data/elements";
 
 const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67 transform-gpu";
 
 interface ElementProps {
   // element data
-  symbol?: string;
-  name?: string;
-  atomicNumber?: number;
+  element?: Element;
   
   // display
-  family?: string;
+  text?: string;
+  range?: string;
   empty?: boolean;
   amount?: number;
   compressedFBlock?: boolean;
@@ -24,73 +24,105 @@ interface ElementProps {
 }
 
 export default function Cell({
-  symbol,
-  name,
-  atomicNumber,
-  family,
+  element,
+  text,
+  range,
   empty = false,
   amount = 0,
   compressedFBlock = false
 }: ElementProps) {
-  if (!empty) {
-    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${family} font-bold`;
+  if (!empty && !element && !compressedFBlock) {
+    console.log("Something fucked up somewhere");
+    
+    return (
+      <div className="z-5 bg-black border-2 border-red-500 w-fit p-2 content-center font-bold">
+        <span>Invalid Element</span>
+      </div>
+    ); // return
+  } else if (!empty) {
+    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 font-bold`;
 
     if (!compressedFBlock) {
-      let familyType;
+      let familyText, color;
 
-      switch (family) {
-        case config.family.alkaliMetal:
-          familyType = "Alkali Metal";
+      switch (element!.family) {
+        case "alkaliMetal":
+          familyText = "Alkali Metal";
+          color = config.family.alkaliMetal;
           break;
-        case config.family.alkalineEarthMetal:
-          familyType = "Alkaline Earth Metal";
+        case "alkalineEarthMetal":
+          familyText = "Alkaline Earth Metal";
+          color = config.family.alkalineEarthMetal;
           break;
-        case config.family.transitionMetal:
-          familyType = <span>Transition<br />Metal</span>;
+        case "transitionMetal":
+          familyText = <span>Transition<br />Metal</span>;
+          color = config.family.transitionMetal;
           break;
-        case config.family.postTransitionMetal:
-          familyType = "Post-Transition Metal";
+        case "postTransitionMetal":
+          familyText = "Post-Transition Metal";
+          color = config.family.postTransitionMetal;
           break;
-        case config.family.metalloid:
-          familyType = "Metalloid";
+        case "metalloid":
+          familyText = "Metalloid";
+          color = config.family.metalloid;
           break;
-        case config.family.nonmetal:
-          familyType = "Nonmetal";
+        case "nonmetal":
+          familyText = "Nonmetal";
+          color = config.family.nonmetal;
           break;
-        case config.family.halogen:
-          familyType = "Halogen";
+        case "halogen":
+          familyText = "Halogen";
+          color = config.family.halogen;
           break;
-        case config.family.nobleGas:
-          familyType = "Noble Gas";
+        case "nobleGas":
+          familyText = "Noble Gas";
+          color = config.family.nobleGas;
           break;
-        case config.family.lanthanide:
-          familyType = "Lanthanide";
+        case "lanthanide":
+          familyText = "Lanthanide";
+          color = config.family.lanthanide;
           break;
-        case config.family.actinide:
-          familyType = "Actinide";
+        case "actinide":
+          familyText = "Actinide";
+          color = config.family.actinide;
           break;
         default:
-          familyType = "Unknown";
+          familyText = "Unknown";
           break;
       } // switch
 
-      blockStyle = `${blockStyle} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
+      blockStyle = `${blockStyle} ${color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] hover:scale-105 hover:z-10`;
 
       return (
         <div className={blockStyle}>
-          <span className="text-lg pl-1.5">{atomicNumber}</span>
-          <div className="text-center text-5xl -mt-1">{symbol}</div>
-          <div className="text-center">{name}</div>
-          <div className="text-center text-sm mt-1">{familyType}</div>
+          <span className="text-lg pl-1.5">{element!.atomicNumber}</span>
+          <div className="text-center text-5xl -mt-1">{element!.symbol}</div>
+          <div className="text-center">{element!.name}</div>
+          <div className="text-center text-sm mt-1">{familyText}</div>
         </div>
       ); // return regualr cell
-    } else {
-      blockStyle = `${blockStyle} place-content-center`;
+    } else if (element == undefined) {
+      let color;
+
+      // fuck it we hardcode
+      switch (text) {
+        case "Lanthanide Series":
+          color = config.family.lanthanide;
+          break;
+        case "Actinide Series":
+          color = config.family.actinide;
+          break;
+        default:
+          Error("When compressedFBlock is true, text must either be 'Lanthanide Series' or 'Actinide Series'");
+          break;
+      } // switch
+
+      blockStyle = `${blockStyle} ${color} place-content-center`;
 
       return (
         <div className={blockStyle}>
-          <div className="text-xl pl-1.5 text-center mb-3">{symbol}</div>
-          <div className="text-center text-lg">{name}</div>
+          <div className="text-xl pl-1.5 text-center mb-3">{range}</div>
+          <div className="text-center text-lg">{text}</div>
         </div>
       ); // return compressed f block
     } // if (!compressedFBlock)
