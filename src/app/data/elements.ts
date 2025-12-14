@@ -68,4 +68,24 @@ export const Selenium: Element  = new Element({name: "Selenium", symbol: "Se", f
 export const Bromine: Element   = new Element({name: "Bromine", symbol: "Br", family: "halogen", atomicNumber: 35, group: 17, period: 4});
 export const Krypton: Element   = new Element({name: "Krypton", symbol: "Kr", family: "nobleGas", atomicNumber: 36, group: 18, period: 4});
 
+// period 5
+export const Rubidium: Element   = new Element({name: "Rubidium", symbol: "Rb", family: "alkaliMetal", atomicNumber: 37, group: 1, period: 5});
+export const Strontium: Element  = new Element({name: "Strontium", symbol: "Sr", family: "alkalineEarthMetal", atomicNumber: 38, group: 2, period: 5});
+export const Yttrium: Element    = new Element({name: "Yttrium", symbol: "Y", family: "transitionMetal", atomicNumber: 39, group: 3, period: 5});
+export const Zirconium: Element  = new Element({name: "Zirconium", symbol: "Zr", family: "transitionMetal", atomicNumber: 40, group: 4, period: 5});
+export const Niobium: Element    = new Element({name: "Niobium", symbol: "Nb", family: "transitionMetal", atomicNumber: 41, group: 5, period: 5});
+export const Molybdenum: Element = new Element({name: "Molybdenum", symbol: "Mo", family: "transitionMetal", atomicNumber: 42, group: 6, period: 5});
+export const Technetium: Element = new Element({name: "Technetium", symbol: "Tc", family: "transitionMetal", atomicNumber: 43, group: 7, period: 5});
+export const Ruthenium: Element  = new Element({name: "Ruthenium", symbol: "Ru", family: "transitionMetal", atomicNumber: 44, group: 8, period: 5});
+export const Rhodium: Element    = new Element({name: "Rhodium", symbol: "Rh", family: "transitionMetal", atomicNumber: 45, group: 9, period: 5});
+export const Palladium: Element  = new Element({name: "Palladium", symbol: "Pd", family: "transitionMetal", atomicNumber: 46, group: 10, period: 5});
+export const Silver: Element     = new Element({name: "Silver", symbol: "Ag", family: "transitionMetal", atomicNumber: 47, group: 11, period: 5});
+export const Cadmium: Element    = new Element({name: "Cadmium", symbol: "Cd", family: "transitionMetal", atomicNumber: 48, group: 12, period: 5});
+export const Indium: Element     = new Element({name: "Indium", symbol: "In", family: "postTransitionMetal", atomicNumber: 49, group: 13, period: 5});
+export const Tin: Element        = new Element({name: "Tin", symbol: "Sn", family: "postTransitionMetal", atomicNumber: 50, group: 14, period: 5});
+export const Antimony: Element   = new Element({name: "Antimony", symbol: "Sb", family: "metalloid", atomicNumber: 51, group: 15, period: 5});
+export const Tellurium: Element  = new Element({name: "Tellurium", symbol: "Te", family: "metalloid", atomicNumber: 52, group: 16, period: 5});
+export const Iodine: Element     = new Element({name: "Iodine", symbol: "I", family: "halogen", atomicNumber: 53, group: 17, period: 5});
+export const Xenon: Element      = new Element({name: "Xenon", symbol: "Xe", family: "nobleGas", atomicNumber: 54, group: 18, period: 5});
+
 export default ELEMENTS;
