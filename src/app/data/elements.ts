@@ -1,4 +1,4 @@
-let ELEMENTS: Element[] = [];
+const ELEMENTS: Element[] = [];
 
 export class Element {
     [x: string|number]: string|number;
