@@ -10,7 +10,8 @@ import Actinides from "./periods/actinides.tsx";
 
 export default function PeriodicTable() {
   return (
-    <div className="grid gap-x-16 grid-cols-18 grid-rows-9 scale-87 max-w-420 lg:-translate-x-16 lg:mx-auto">
+    <div className="grid gap-x-16 grid-cols-18 grid-rows-9 scale-87 max-w-420
+                    xl:-translate-x-16 xl:mx-auto">
       <Period1 />
       <Period2 />
       <Period3 />
