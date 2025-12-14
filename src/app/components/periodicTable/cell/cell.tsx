@@ -13,7 +13,7 @@ interface ElementProps {
   atomicNumber?: number;
   
   // display
-  color?: string;
+  family?: string;
   empty?: boolean;
   amount?: number;
   compressedFBlock?: boolean;
@@ -27,50 +27,50 @@ export default function Cell({
   symbol,
   name,
   atomicNumber,
-  color,
+  family,
   empty = false,
   amount = 0,
   compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${color} font-bold select-none`;
+    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${family} font-bold select-none`;
 
     if (!compressedFBlock) {
-      let family;
+      let familyType;
 
-      switch (color) {
-        case config.colors.alkaliMetal:
-          family = "Alkali Metal";
+      switch (family) {
+        case config.family.alkaliMetal:
+          familyType = "Alkali Metal";
           break;
-        case config.colors.alkalineEarthMetal:
-          family = "Alkaline Earth Metal";
+        case config.family.alkalineEarthMetal:
+          familyType = "Alkaline Earth Metal";
           break;
-        case config.colors.transitionMetal:
-          family = <span>Transition<br />Metal</span>;
+        case config.family.transitionMetal:
+          familyType = <span>Transition<br />Metal</span>;
           break;
-        case config.colors.postTransitionMetal:
-          family = "Post-Transition Metal";
+        case config.family.postTransitionMetal:
+          familyType = "Post-Transition Metal";
           break;
-        case config.colors.metalloid:
-          family = "Metalloid";
+        case config.family.metalloid:
+          familyType = "Metalloid";
           break;
-        case config.colors.nonmetal:
-          family = "Nonmetal";
+        case config.family.nonmetal:
+          familyType = "Nonmetal";
           break;
-        case config.colors.halogen:
-          family = "Halogen";
+        case config.family.halogen:
+          familyType = "Halogen";
           break;
-        case config.colors.nobleGas:
-          family = "Noble Gas";
+        case config.family.nobleGas:
+          familyType = "Noble Gas";
           break;
-        case config.colors.lanthanide:
-          family = "Lanthanide";
+        case config.family.lanthanide:
+          familyType = "Lanthanide";
           break;
-        case config.colors.actinide:
-          family = "Actinide";
+        case config.family.actinide:
+          familyType = "Actinide";
           break;
         default:
-          family = "Unknown";
+          familyType = "Unknown";
           break;
       } // switch
 

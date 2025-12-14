@@ -1,5 +1,5 @@
 const config = {
-    "colors": {
+    "family": {
         "alkaliMetal": "text-rose-600",
         "alkalineEarthMetal": "text-amber-500",
         "transitionMetal": "text-blue-500",
