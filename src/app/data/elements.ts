@@ -22,14 +22,18 @@ class Element {
     }
 }
 
+// This exists so that you can access the ELEMENTS array by
+// referring to the element's atomic number instead of an array index.
+// Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
+// instead of ELEMENTS[10], with 10 being Neon's atomic number.
 // NaE - Not an Element
-export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: -1, group: -1, period: -1});
+export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN});
 
-// period 1
+// Period 1
 export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1});
 export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1});
 
-// period 2
+// Period 2
 export const Lithium: Element   = new Element({name: "Lithium", symbol: "Li", family: "alkaliMetal", atomicNumber: 3, group: 1, period: 2});
 export const Beryllium: Element = new Element({name: "Beryllium", symbol: "Be", family: "alkalineEarthMetal", atomicNumber: 4, group: 2, period: 2});
 export const Boron: Element     = new Element({name: "Boron", symbol: "B", family: "metalloid", atomicNumber: 5, group: 13, period: 2});
@@ -39,7 +43,7 @@ export const Oxygen: Element    = new Element({name: "Oxygen", symbol: "O", fami
 export const Fluorine: Element  = new Element({name: "Fluorine", symbol: "F", family: "halogen", atomicNumber: 9, group: 17, period: 2});
 export const Neon: Element      = new Element({name: "Neon", symbol: "Ne", family: "nobleGas", atomicNumber: 10, group: 18, period: 2});
 
-// period 3
+// Period 3
 export const Sodium: Element     = new Element({name: "Sodium", symbol: "Na", family: "alkaliMetal", atomicNumber: 11, group: 1, period: 3});
 export const Magnesium: Element  = new Element({name: "Magnesium", symbol: "Mg", family: "alkalineEarthMetal", atomicNumber: 12, group: 2, period: 3});
 export const Aluminum: Element   = new Element({name: "Aluminum", symbol: "Al", family: "postTransitionMetal", atomicNumber: 13, group: 13, period: 3});
@@ -49,7 +53,7 @@ export const Sulfur: Element     = new Element({name: "Sulfur", symbol: "S", fam
 export const Chlorine: Element   = new Element({name: "Chlorine", symbol: "Cl", family: "halogen", atomicNumber: 17, group: 17, period: 3});
 export const Argon: Element      = new Element({name: "Argon", symbol: "Ar", family: "nobleGas", atomicNumber: 18, group: 18, period: 3});
 
-// period 4
+// Period 4
 export const Potassium: Element = new Element({name: "Potassium", symbol: "K", family: "alkaliMetal", atomicNumber: 19, group: 1, period: 4});
 export const Calcium: Element   = new Element({name: "Calcium", symbol: "Ca", family: "alkalineEarthMetal", atomicNumber: 20, group: 2, period: 4});
 export const Scandium: Element  = new Element({name: "Scandium", symbol: "Sc", family: "transitionMetal", atomicNumber: 21, group: 3, period: 4});
@@ -69,7 +73,7 @@ export const Selenium: Element  = new Element({name: "Selenium", symbol: "Se", f
 export const Bromine: Element   = new Element({name: "Bromine", symbol: "Br", family: "halogen", atomicNumber: 35, group: 17, period: 4});
 export const Krypton: Element   = new Element({name: "Krypton", symbol: "Kr", family: "nobleGas", atomicNumber: 36, group: 18, period: 4});
 
-// period 5
+// Period 5
 export const Rubidium: Element   = new Element({name: "Rubidium", symbol: "Rb", family: "alkaliMetal", atomicNumber: 37, group: 1, period: 5});
 export const Strontium: Element  = new Element({name: "Strontium", symbol: "Sr", family: "alkalineEarthMetal", atomicNumber: 38, group: 2, period: 5});
 export const Yttrium: Element    = new Element({name: "Yttrium", symbol: "Y", family: "transitionMetal", atomicNumber: 39, group: 3, period: 5});
