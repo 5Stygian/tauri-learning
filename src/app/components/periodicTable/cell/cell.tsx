@@ -33,7 +33,7 @@ export default function Cell({
   compressedFBlock = false
 }: ElementProps) {
   if (!empty) {
-    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${family} font-bold select-none`;
+    let blockStyle = `${defaultCellStyles} bg-black border-2 shadow-2x1 ${family} font-bold`;
 
     if (!compressedFBlock) {
       let familyType;
