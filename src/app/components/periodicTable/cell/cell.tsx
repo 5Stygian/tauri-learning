@@ -81,7 +81,7 @@ export default function Cell({
           <span className="text-lg pl-1.5">{atomicNumber}</span>
           <div className="text-center text-5xl -mt-1">{symbol}</div>
           <div className="text-center">{name}</div>
-          <div className="text-center text-sm mt-1">{family}</div>
+          <div className="text-center text-sm mt-1">{familyType}</div>
         </div>
       ); // return regualr cell
     } else {
