@@ -22,6 +22,7 @@ class Element {
     }
 }
 
+// NaE - Not an Element
 export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: -1, group: -1, period: -1});
 
 // period 1
