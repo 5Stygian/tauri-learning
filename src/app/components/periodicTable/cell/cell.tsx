@@ -1,3 +1,5 @@
+// i dont care that this is hard af to read. you're smart, figure it out
+
 "use client";
 
 import React from "react";
@@ -16,7 +18,8 @@ interface ElementProps {
   range?: string;
   empty?: boolean;
   amount?: number;
-  compressedFBlock?: boolean;
+  nonElement?: boolean;
+  label?: boolean;
 
   // html props
   className?: string;
@@ -29,9 +32,12 @@ export default function Cell({
   range,
   empty = false,
   amount = 0,
-  compressedFBlock = false
+  nonElement = false,
+  label = false
 }: ElementProps) {
-  if (!empty && !element && !compressedFBlock) {
+  let cellStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
+
+  if (!empty && !element && !nonElement && !label) {
     console.log("Something fucked up somewhere");
     
     return (
@@ -40,9 +46,7 @@ export default function Cell({
       </div>
     ); // return
   } else if (!empty) {
-    let cellStyle = `${defaultCellStyles} bg-black border-3 shadow-2x1 font-bold`;
-
-    if (!compressedFBlock) {
+    if (!nonElement && !label) {
       function handleClick() {
         const elementCard = document.getElementById("elementCard");
         const elementCardSymbol = document.getElementById("elementCardSymbol");
@@ -83,7 +87,7 @@ export default function Cell({
           color = config.family.actinide;
           break;
         default:
-          Error("When compressedFBlock is true, text must either be 'Lanthanide Series' or 'Actinide Series'");
+          Error("When nonElement is true, text must either be 'Lanthanide Series' or 'Actinide Series'");
           break;
       } // switch
 
@@ -95,7 +99,7 @@ export default function Cell({
           <div className="text-center text-lg">{text}</div>
         </div>
       ); // return compressed f block
-    } // if (!compressedFBlock)
+    } // if element is a compressed f block
   } else { // if cell should be an empty cell
     const elementArray: React.ReactNode[] = [];
     
@@ -110,5 +114,5 @@ export default function Cell({
         {elementArray}
       </>
     ); // return empty cells
-  } // else 
+  } // else
 } // Cell

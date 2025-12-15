@@ -7,11 +7,13 @@ import Period6 from "./periods/period6.tsx";
 import Period7 from "./periods/period7.tsx";
 import Lanthanides from "./periods/lanthanides.tsx";
 import Actinides from "./periods/actinides.tsx";
+import Groups from "./periods/groups.tsx";
 
 export default function PeriodicTable() {
   return (
-    <div className="grid gap-x-16 grid-cols-18 grid-rows-9 scale-87 max-w-420
+    <div className="grid gap-x-16 grid-cols-19 grid-rows-10 scale-87 max-w-420
                     xl:-translate-x-16 xl:mx-auto">
+      <Groups />
       <Period1 />
       <Period2 />
       <Period3 />

@@ -1,10 +1,12 @@
 import Cell from "../cell/cell.tsx"
 
 import { Potassium, Calcium, Scandium, Titanium, Vandium, Chromium, Manganese, Iron, Cobalt, Nickel, Copper, Zinc, Gallium, Germanium, Arsenic, Selenium, Bromine, Krypton } from "@/app/data/elements.ts";
+import Label from "../cell/label.tsx";
 
 export default function Period4() {
   return (
     <>
+      <Label isPeriod={true} text="4"/>
       <Cell element={Potassium} />
       <Cell element={Calcium} />
       <Cell element={Scandium} />

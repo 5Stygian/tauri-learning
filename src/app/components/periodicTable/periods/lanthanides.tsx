@@ -5,7 +5,7 @@ import { Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europ
 export default function Lanthanides() {
   return (
     <>
-      <Cell empty={true} amount={3} />
+      <Cell empty={true} amount={4} />
       <Cell element={Lanthanum} />
       <Cell element={Cerium} />
       <Cell element={Praseodymium} />

@@ -5,7 +5,7 @@ import { Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americi
 export default function Actinides() {
   return (
     <>
-      <Cell empty={true} amount={3} />
+      <Cell empty={true} amount={4} />
       <Cell element={Actinium} />
       <Cell element={Thorium} />
       <Cell element={Protactinium} />

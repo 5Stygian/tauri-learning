@@ -1,10 +1,12 @@
 import Cell from "../cell/cell.tsx"
 
 import { Rubidium, Strontium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Palladium, Silver, Cadmium, Indium, Tin, Antimony, Tellurium, Iodine, Xenon } from "@/app/data/elements.ts";
+import Label from "../cell/label.tsx";
 
 export default function Period5() {
   return (
     <>
+      <Label isPeriod={true} text="5"/>
       <Cell element={Rubidium} />
       <Cell element={Strontium} />
       <Cell element={Yttrium} />
