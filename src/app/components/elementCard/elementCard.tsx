@@ -33,6 +33,17 @@ export default function ElementCard() {
               <th className={dataTitleStyling}>Period</th>
               <td id="elementCardPeriod" className="text-white">{NaE.period}</td>
             </tr>
+            <tr>
+              <th className="text-white" colSpan={2}>Electron Configuration</th>
+            </tr>
+            <tr>
+              <th className={dataTitleStyling}>Full</th>
+              <td id="elementCardECFull" className="text-white">{NaE.electronConfiguration.full}</td>
+            </tr>
+            <tr>
+              <th className={dataTitleStyling}>Noble Gas</th>
+              <td id="elementCardECNobleGas" className="text-white">{NaE.electronConfiguration.nobleGas}</td>
+            </tr>
           </tbody>
         </table>
       </div>
