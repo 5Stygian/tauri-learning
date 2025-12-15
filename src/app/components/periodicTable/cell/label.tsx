@@ -12,7 +12,7 @@ export default function Label({
   if (!isPeriod) {
     textStyle = `${textStyle} lg:pt-16`;
   } else {
-    textStyle = `${textStyle} lg:pl-10`;
+    textStyle = `${textStyle} md:pl-10 lg:pl-10`;
   }
   
   return (
