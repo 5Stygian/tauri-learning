@@ -55,14 +55,18 @@ export default function Cell({
         const elementCardAtomicNumber = document.getElementById("elementCardAtomicNumber");
         const elementGroup = document.getElementById("elementCardGroup");
         const elementCardPeriod = document.getElementById("elementCardPeriod");
+        const elementCardECFull = document.getElementById("elementCardECFull");
+        const elementCardECNobleGas = document.getElementById("elementCardECNobleGas");
 
         elementCard!.className = `w-screen flex justify-center items-center pb-20 hover:cursor-default ${element!.color}`;
         elementCardSymbol!.innerHTML = `${element!.symbol}`;
-        elementCardName!.innerHTML = `${element!.name}`
-        elementCardFamily!.innerHTML = `${element!.familyText}`
-        elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`
-        elementGroup!.innerHTML = `${element!.group}`
-        elementCardPeriod!.innerHTML = `${element!.period}`
+        elementCardName!.innerHTML = `${element!.name}`;
+        elementCardFamily!.innerHTML = `${element!.familyText}`;
+        elementCardAtomicNumber!.innerHTML = `${element!.atomicNumber}`;
+        elementGroup!.innerHTML = `${element!.group}`;
+        elementCardPeriod!.innerHTML = `${element!.period}`;
+        elementCardECFull!.innerHTML = `${element!.electronConfiguration.full}`;
+        elementCardECNobleGas!.innerHTML = `${element!.electronConfiguration.nobleGas}`;
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
