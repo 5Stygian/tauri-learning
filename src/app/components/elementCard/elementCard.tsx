@@ -3,7 +3,7 @@ import { NaE } from "@/app/data/elements";
 export default function ElementCard() {
   const symbolStyling = `min-w-32 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center hover:cursor-default`;
   const dataTableStyling = `min-w-110 w-min min-h-40 bg-black border-3 shadow-2x1 font-bold ${NaE.color} flex justify-center items-center ml-8 px-8 hover:cursor-default`;
-  const dataTitleStyling = "pr-12 float-left";
+  const dataTitleStyling = "min-w-40 pr-12 float-left";
 
   return (
     <div id="elementCard" className="w-screen flex justify-center items-center pb-20 hover:cursor-default">
