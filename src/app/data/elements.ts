@@ -1,9 +1,11 @@
 "use client";
 
+import React from 'react';
+
 import config from "./config";
 
 export class Element {
-  [x: string | number | Record<string, string>]: string | number | Record<string, string>;
+  [x: React.ReactNode]: React.ReactNode;
   public constructor({name, symbol, family, atomicNumber, group, period, electronConfiguration}: {
     name: string,
     symbol: string,
