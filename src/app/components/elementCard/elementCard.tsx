@@ -38,15 +38,11 @@ export default function ElementCard() {
             </tr>
             <tr>
               <th className={dataTitleStyling}>Full</th>
-              <td id="elementCardECFull" className="text-white">
-                {NaE.electronConfiguration?.full ?? "N/A"}
-              </td>
+              <td id="elementCardECFull" className="text-white">{NaE.fullElectronConfiguration}</td>
             </tr>
             <tr>
               <th className={dataTitleStyling}>Noble Gas</th>
-              <td id="elementCardECNobleGas" className="text-white">
-                {NaE.electronConfiguration?.nobleGas ?? "N/A"}
-              </td>
+              <td id="elementCardECNobleGas" className="text-white">{NaE.nobleGasElectronConfiguration}</td>
             </tr>
           </tbody>
         </table>
