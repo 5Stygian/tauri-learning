@@ -38,11 +38,15 @@ export default function ElementCard() {
             </tr>
             <tr>
               <th className={dataTitleStyling}>Full</th>
-              <td id="elementCardECFull" className="text-white">{String(NaE.electronConfiguration.full)}</td>
+              <td id="elementCardECFull" className="text-white">
+                {typeof element.symbol === 'object' ? JSON.stringify(element.symbol) : String(element.symbol)}
+              </td>
             </tr>
             <tr>
               <th className={dataTitleStyling}>Noble Gas</th>
-              <td id="elementCardECNobleGas" className="text-white">{String(NaE.electronConfiguration.nobleGas)}</td>
+              <td id="elementCardECNobleGas" className="text-white">
+                {typeof element.symbol === 'object' ? JSON.stringify(element.symbol) : String(element.symbol)}
+              </td>
             </tr>
           </tbody>
         </table>
