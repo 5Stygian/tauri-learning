@@ -7,7 +7,7 @@ import React from "react";
 import config from "@/app/data/config";
 import { Element } from "@/app/data/elements";
 
-const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67 transform-gpu";
+const defaultCellStyles = "min-w-32 w-min min-h-25 -my-4 scale-67";
 
 interface ElementProps {
   // element data
