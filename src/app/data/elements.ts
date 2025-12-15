@@ -77,7 +77,7 @@ export class Element {
 // Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
 // instead of ELEMENTS[10], with 10 being Neon's atomic number.
 // NaE - Not an Element
-export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, electronConfiguration: {"full": "", "nobleGas": ""}});
+export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, electronConfiguration: {"full": "N/A", "nobleGas": "N/A"}});
 
 // Period 1
 export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, electronConfiguration: {"full": "1s1", "nobleGas": "N/A"}});
