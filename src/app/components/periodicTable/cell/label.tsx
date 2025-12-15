@@ -7,14 +7,14 @@ export default function Label({
   text,
   isPeriod = false
 }: LabelProps) {
-  let textStyle;
+  let textStyle = "text-2xl font-bold";
 
   if (!isPeriod) {
-    textStyle = "pt-16 text-2xl";
+    textStyle = `${textStyle} lg:pt-16`;
   } else {
-    textStyle = "pl-10 text-2xl";
+    textStyle = `${textStyle} lg:pl-10`;
   }
-
+  
   return (
     <div className="flex min-w-32 min-h-25 justify-center items-center">
       <div className={textStyle}>{text}</div>
