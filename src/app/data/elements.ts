@@ -13,7 +13,8 @@ export class Element {
     atomicNumber: number,
     group: number|string,
     period: number,
-    electronConfiguration: Record<string, string>
+    fullElectronConfiguration: string,
+    nobleGasElectronConfiguration: string,
   }
   ) {
     this.name = name;
@@ -22,7 +23,8 @@ export class Element {
     this.atomicNumber = atomicNumber;
     this.group = group;
     this.period = period;
-    this.electronConfiguration = electronConfiguration;
+    this.fullElectronConfiguration = fullElectronConfiguration;
+    this.nobleGasElectronConfiguration = nobleGasElectronConfiguration;
     
     switch (this.family) {
       case "alkaliMetal":
@@ -79,11 +81,11 @@ export class Element {
 // Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
 // instead of ELEMENTS[10], with 10 being Neon's atomic number.
 // NaE - Not an Element
-export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, electronConfiguration: {"full": "N/A", "nobleGas": "N/A"}});
+export const NaE: Element = new Element({name: "NaE", symbol: "NaE", family: "NaE", atomicNumber: NaN, group: NaN, period: NaN, fullElectronConfiguration: "N/A", nobleGasElectronConfiguration: "N/A"});
 
 // Period 1
-export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, electronConfiguration: {"full": "1s1", "nobleGas": "N/A"}});
-export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1, electronConfiguration: {"full": "1s2", "nobleGas": "N/A"}});
+export const Hydrogen: Element = new Element({name: "Hydrogen", symbol: "H", family: "nonmetal", atomicNumber: 1, group: 1, period: 1, fullElectronConfiguration: "1s1", nobleGasElectronConfiguration: "N/A"});
+export const Helium: Element   = new Element({name: "Helium", symbol: "He", family: "nobleGas", atomicNumber: 2, group: 18, period: 1, fullElectronConfiguration: "1s2", nobleGasElectronConfiguration: "N/A"});
 
 // Period 2
 export const Lithium: Element   = new Element({name: "Lithium", symbol: "Li", family: "alkaliMetal", atomicNumber: 3, group: 1, period: 2});
