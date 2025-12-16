@@ -80,7 +80,7 @@ export class Element {
       default:
         this.familyText = "Unknown";
         this.color = config.family.unknown;
-        this.tags.push(this.group);
+        this.tags.push(`${this.group}`);
         break;
     }
 
