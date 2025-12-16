@@ -84,7 +84,7 @@ export class Element {
         break;
     }
 
-    this.tags.push(this.familyText);
+    this.tags.push(this.family);
     this.tags.push(this.tagsGroup);
     this.tags.push(`period ${this.period}`);
     
