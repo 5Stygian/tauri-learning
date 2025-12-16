@@ -45,6 +45,10 @@ export default function ElementCard() {
               <th className={dataTitleStyling}>Noble Gas</th>
               <td id="elementCardECNobleGas" className={dataContentStyling}>{NaE.nobleGasElectronConfiguration}</td>
             </tr>
+            <tr>
+              <th className={dataTitleStyling}>Tags</th>
+              <td id="elementCardTags" className={dataContentStyling}>{NaE.tags}</td>
+            </tr>
           </tbody>
         </table>
       </div>
