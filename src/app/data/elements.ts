@@ -89,9 +89,14 @@ export class Element {
         }
         
         break;
-      default:
+      case "unknown":
         this.familyText = "Unknown";
         this.color = config.family.unknown;
+        this.tagsGroup = `${this.group}`;
+        break;
+      default:
+        this.familyText = "ERROR";
+        this.color = config.family.error;
         this.tagsGroup = `${this.group}`;
         break;
     }
