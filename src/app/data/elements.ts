@@ -30,61 +30,62 @@ export class Element {
       case "alkaliMetal":
         this.familyText = "Alkali Metal";
         this.color = config.family.alkaliMetal;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "alkalineEarthMetal":
         this.familyText = "Alkaline Earth Metal";
         this.color = config.family.alkalineEarthMetal;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "transitionMetal":
         this.familyText = "Transition Metal";
         this.color = config.family.transitionMetal;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "postTransitionMetal":
         this.familyText = "Post-Transition Metal";
         this.color = config.family.postTransitionMetal;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "metalloid":
         this.familyText = "Metalloid";
         this.color = config.family.metalloid;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "nonmetal":
         this.familyText = "Nonmetal";
         this.color = config.family.nonmetal;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "halogen":
         this.familyText = "Halogen";
         this.color = config.family.halogen;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "nobleGas":
         this.familyText = "Noble Gas";
         this.color = config.family.nobleGas;
-        this.tags.push(`group ${this.group}`);
+        this.tagsGroup = `group ${this.group}`;
         break;
       case "lanthanide":
         this.familyText = "Lanthanide";
         this.color = config.family.lanthanide;
-        this.tags.push(`${this.group}`);
+        this.tagsGroup = `${this.group}`;
         break;
       case "actinide":
         this.familyText = "Actinide";
         this.color = config.family.actinide;
-        this.tags.push(`${this.group}`);
+        this.tagsGroup = `${this.group}`;
         break;
       default:
         this.familyText = "Unknown";
         this.color = config.family.unknown;
-        this.tags.push(`${this.group}`);
+        this.tagsGroup = `${this.group}`;
         break;
     }
 
     this.tags.push(this.familyText);
+    this.tags.push(this.tagsGroup);
     this.tags.push(`period ${this.period}`);
     
   }
