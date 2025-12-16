@@ -13,7 +13,7 @@ export class Element {
     period: number,
     fullElectronConfiguration: string,
     nobleGasElectronConfiguration: string,
-    tags: string[]
+    tags?: string[]
   }
   ) {
     this.name = name;
@@ -24,6 +24,7 @@ export class Element {
     this.period = period;
     this.fullElectronConfiguration = fullElectronConfiguration;
     this.nobleGasElectronConfiguration = nobleGasElectronConfiguration;
+    this.tags = tags;
     
     switch (this.family) {
       case "alkaliMetal":
@@ -71,6 +72,11 @@ export class Element {
         this.color = "text-white";
         break;
     }
+
+    this.tags.push(this.familyText);
+    this.tags.push(`group ${this.group}`);
+    this.tags.push(`period ${this.period}`);
+    
   }
 }
 
