@@ -68,7 +68,7 @@ export default function Cell({
         elementCardPeriod!.innerHTML = `${element!.period}`;
         elementCardECFull!.innerHTML = `${String(element!.fullElectronConfiguration)}`;
         elementCardECNobleGas!.innerHTML = `${String(element!.nobleGasElectronConfiguration)}`;
-        elementCardTags!.innerHTML = `${String(element!.tags).split(" ")}`;
+        elementCardTags!.innerHTML = `${String(element!.tags)} `;
       }
 
       cellStyle = `${cellStyle} ${element!.color} duration-75 ease-[cubic-bezier(0.06, 0.98, 0.41, 0.93)] 
