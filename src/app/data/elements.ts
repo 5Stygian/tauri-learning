@@ -5,7 +5,7 @@ import config from "./config";
 export class Element {
   [x: string]: string | string[] | number;
   
-  public constructor({name, symbol, family, atomicNumber, group, period, fullElectronConfiguration, nobleGasElectronConfiguration, tags}: {
+  public constructor({name, symbol, family, atomicNumber, group, period, fullElectronConfiguration, nobleGasElectronConfiguration, tags=[]}: {
     name: string,
     symbol: string,
     family: string,
@@ -14,7 +14,7 @@ export class Element {
     period: number,
     fullElectronConfiguration: string,
     nobleGasElectronConfiguration: string,
-    tags: string[] = []
+    tags?: string[]
   }) {
     this.name = name;
     this.symbol = symbol;
