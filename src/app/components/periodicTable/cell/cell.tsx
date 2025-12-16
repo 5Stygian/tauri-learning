@@ -48,8 +48,10 @@ export default function Cell({
   } else if (!empty) {
     if (!nonElement && !label) {
       // create a list of tags with spaces in between them
+      let tags = "";
+      
       if (Array.isArray(element!.tags)) {
-        const tags = element!.tags.join(", ");
+        tags = element!.tags.join(", ");
       }
       
       function handleClick() {
