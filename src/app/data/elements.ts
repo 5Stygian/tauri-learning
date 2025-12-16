@@ -70,12 +70,12 @@ export class Element {
       case "lanthanide":
         this.familyText = "Lanthanide";
         this.color = config.family.lanthanide;
-        this.tags.push(this.group);
+        this.tags.push(`${this.group}`);
         break;
       case "actinide":
         this.familyText = "Actinide";
         this.color = config.family.actinide;
-        this.tags.push(this.group);
+        this.tags.push(`${this.group}`);
         break;
       default:
         this.familyText = "Unknown";
