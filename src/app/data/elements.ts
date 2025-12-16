@@ -3,15 +3,7 @@
 import config from "./config";
 
 export class Element {
-  name: string;
-  symbol: string;
-  family: string;
-  atomicNumber: number;
-  group: number|string;
-  period: number;
-  fullElectronConfiguration: string;
-  nobleGasElectronConfiguration: string;
-  tags?: string[];
+  [x: string]: string | string[] | number | undefined;
   
   public constructor({name, symbol, family, atomicNumber, group, period, fullElectronConfiguration, nobleGasElectronConfiguration, tags}: {
     name: string,
