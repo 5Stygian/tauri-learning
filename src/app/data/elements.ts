@@ -2,6 +2,8 @@
 
 import config from "./config";
 
+export let ELEMENTS: Element[] = [];
+
 interface ElementDict {
   name: string;
   symbol: string;
@@ -141,6 +143,8 @@ export class Element {
       "nobleGasElectronConfiguration": this.nobleGasElectronConfiguration,
       "tags": this.tags
     }
+
+    ELEMENTS[atomicNumber] = this;
   }
 }
 
