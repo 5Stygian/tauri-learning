@@ -148,7 +148,6 @@ export class Element {
   }
 }
 
-// !! ELEMENTS no longer exists !!
 // This exists so that you can access the ELEMENTS array by
 // referring to the element's atomic number instead of an array index.
 // Without NaE, you would access Neon by doing ELEMENTS[9] (array index)
